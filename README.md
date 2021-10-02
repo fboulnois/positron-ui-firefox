@@ -6,7 +6,6 @@
 2. [Screenshots](#Screenshots)
 3. [Installation](#Installation)
 4. [Proton UI Issues](#Proton-UI-Issues)
-5. [Naming](#Naming)
 
 ## Introduction
 
