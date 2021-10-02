@@ -1,0 +1,81 @@
+/*! Positron for Firefox 89+ | License: MPL2.0 */
+@media (-moz-proton) {
+    /* Use square tabs */
+    #tabbrowser-tabs {
+        --user-tab-rounding: 0px;
+    }
+
+    /* Connect tab to address bar */
+    .tab-background {
+        border-radius: var(--user-tab-rounding) var(--user-tab-rounding) 0px 0px !important;
+        margin-block: 1px 0 !important;
+    }
+
+    /* Prevent vertical tab expansion due to overflow */
+    #scrollbutton-up, #scrollbutton-down {
+        border-top-width: 1px !important;
+        border-bottom-width: 0 !important;
+    }
+
+    /* Remove padding between tabs */
+    .tabbrowser-tab {
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+    }
+
+    /* Add vertical separator between inactive tabs  */
+    .tabbrowser-tab:not([first-visible-tab])::before,
+    .tabbrowser-tab[last-visible-tab]::after {
+        content: "";
+        display: inherit;
+        position: absolute;
+        border-left: 1px solid currentColor;
+        margin-block: calc(var(--tab-min-height) / 4 - 3px);
+        opacity: 0.2;
+    }
+
+    .tabbrowser-tab:is(
+        [selected],
+        [selected] + .tabbrowser-tab:not([selected]),
+        [multiselected])::before,
+    .tabbrowser-tab:is(
+        [selected],
+        [multiselected])::after {
+        border-color: transparent;
+    }
+
+    .tabbrowser-tab::after {
+        margin-left: -1px;
+    }
+
+    /* Remove spacing between window and pinned tabs */
+    .titlebar-spacer[type="pre-tabs"] {
+        display: none !important;
+    }
+
+    /* Remove spacing between pinned tabs and other tabs */
+    .tabbrowser-tab[first-visible-unpinned-tab] {
+        margin-inline-start: 0 !important;
+    }
+
+    /* Add context line on selected tab */
+    :root[lwtheme-mozlightdark] #tabbrowser-tabs {
+        --tab-line-color: rgb(10, 132, 255) !important;
+    }
+
+    .tab-context-line {
+        display: -moz-inline-box !important;
+        height: 2px !important;
+        border-radius: var(--user-tab-rounding) var(--user-tab-rounding) 0 0 !important;
+    }
+
+    .tabbrowser-tab:is([selected], [multiselected]) .tab-context-line {
+        background-color: var(--tab-line-color) !important;
+    }
+
+    /* Remove color border around active tab */
+    .tabbrowser-tab:is([selected], [multiselected]) > .tab-stack > .tab-background {
+        --tabs-border-color: rgba(0,0,0,.3) !important;
+        box-shadow: 0 0 1px var(--tabs-border-color), 0 0 4px rgba(128,128,142,0.5) !important;
+    }
+}
