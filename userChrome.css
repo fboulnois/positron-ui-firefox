@@ -1,5 +1,5 @@
 /*! Positron for Firefox 89+ | License: MPL2.0 */
-@media (-moz-proton) {
+@media all {
     /* Use square tabs */
     #tabbrowser-tabs {
         --user-tab-rounding: 0px;
