@@ -1,4 +1,4 @@
-/*! Positron for Firefox 89+ | License: MPL2.0 */
+/*! Positron UI for Firefox | License: MPL2.0 */
 
 /* Use square tabs */
 #tabbrowser-tabs {
@@ -48,9 +48,16 @@
     margin-left: -1px;
 }
 
-/* Remove spacing between window and pinned tabs */
+/* Reduce spacing between window and pinned tabs by default */
 .titlebar-spacer[type="pre-tabs"] {
-    display: none !important;
+    width: 12px !important;
+}
+
+/* Remove spacing between window and pinned tabs on Windows 10 */
+@media (-moz-os-version: windows-win10), (-moz-platform: windows-win10) {
+    .titlebar-spacer[type="pre-tabs"] {
+        display: none !important;
+    }
 }
 
 /* Remove spacing between pinned tabs and other tabs */
