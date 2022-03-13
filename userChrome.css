@@ -72,10 +72,4 @@
     .tabbrowser-tab:is([selected], [multiselected]) .tab-context-line {
         background-color: var(--tab-line-color) !important;
     }
-
-    /* Remove color border around active tab */
-    .tabbrowser-tab:is([selected], [multiselected]) > .tab-stack > .tab-background {
-        --tabs-border-color: rgba(0,0,0,.3) !important;
-        box-shadow: 0 0 1px var(--tabs-border-color), 0 0 4px rgba(128,128,142,0.5) !important;
-    }
 }
