@@ -53,7 +53,7 @@
     width: 12px !important;
 }
 
-/* Remove spacing between window and pinned tabs on Windows 7, 8, 10, 11 */
+/* Remove spacing between window and pinned tabs on Windows */
 @media (-moz-os-version: windows-win7), (-moz-platform: windows-win7),
   (-moz-os-version: windows-win8), (-moz-platform: windows-win8),
   (-moz-os-version: windows-win10), (-moz-platform: windows-win10) {
