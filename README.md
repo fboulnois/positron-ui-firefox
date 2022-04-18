@@ -26,8 +26,8 @@ Positron does not modify other parts of the Proton UI, including context menus,
 theme colors, icons, or UI control positions. Despite font sizes being unchanged,
 Positron takes slightly less space vertically and leaves more space for text
 horizontally. Positron is also compatible with different Firefox themes and UI
-densities. The latest [`userChrome.css`](userChrome.css) supports Firefox 98+ on
-macOS and Windows.
+densities. The latest [`userChrome.css`](userChrome.css) supports Firefox 99+ on
+Linux, macOS, and Windows.
 
 ## Screenshots
 
